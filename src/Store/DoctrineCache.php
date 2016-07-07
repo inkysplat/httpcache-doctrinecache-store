@@ -433,7 +433,7 @@ class DoctrineCache implements StoreInterface
         unset($headers['X-Status']);
 
         if (null !== $body) {
-            $headers['X-Body-File'] = array($body);
+            $headers['X-Body-Eval'] = 'SSI';
         }
 
         return new Response($body, $status, $headers);
